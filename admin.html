@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Reservas - Restaurantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Administración de Reservas</h1>
+
+        <div class="filters-grid">
+            <div class="form-group">
+                <label for="filterDate">Fecha</label>
+                <input type="date" id="filterDate" class="input-field">
+            </div>
+            <div class="form-group">
+                <label for="filterRestaurant">Restaurante</label>
+                <select id="filterRestaurant" class="input-field">
+                    <option value="">Todos los Restaurantes</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="filterStatus">Estado</label>
+                <select id="filterStatus" class="input-field">
+                    <option value="">Todos los Estados</option>
+                    <option value="confirmed">Confirmada</option>
+                    <option value="cancelled">Cancelada</option>
+                    <option value="printed">Impresa</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button id="applyFiltersBtn" class="btn primary">Aplicar Filtros</button>
+                <button id="resetFiltersBtn" class="btn secondary">Resetear Filtros</button>
+            </div>
+        </div>
+
+        <div class="summary-box" id="occupancySummary">
+            <h2>Resumen de Ocupación para <span id="summaryDate"></span></h2>
+            </div>
+
+        <div class="table-responsive">
+            <table id="reservationsTable">
+                <thead>
+                    <tr>
+                        <th>Habitación</th>
+                        <th>Hués.</th>
+                        <th>Restaurante</th>
+                        <th>Horario</th>
+                        <th>Pax</th>
+                        <th>Notas</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <p id="noReservationsMessage" class="no-reservations" style="display: none;">No hay reservas para los filtros seleccionados.</p>
+        </div>
+
+        <div class="print-section">
+            <button id="printDailyReservationsBtn" class="btn secondary">Imprimir Reservas del Día</button>
+        </div>
+    </div>
+
+    <script src="admin.js" type="module"></script>
+</body>
+</html>
