@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Reservas - Restaurantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nueva Reserva</h1>
+        <div id="operatingHoursMessage" class="message info"></div>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="roomNumber">Número de Habitación</label>
+                <input type="text" id="roomNumber" required placeholder="Ej: 2152">
+            </div>
+
+            <div class="form-group">
+                <label for="guestName">Nombre del Huésped</label>
+                <input type="text" id="guestName" required placeholder="Ej: Mr. Matias">
+            </div>
+
+            <div class="form-group">
+                <label for="restaurant">Restaurante</label>
+                <select id="restaurant" required>
+                    <option value="">Selecciona un restaurante</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label for="timeSlot">Horario</label>
+                <select id="timeSlot" required disabled>
+                    <option value="">Selecciona un horario</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pax">Número de Personas (Pax)</label>
+                <input type="number" id="pax" min="1" required placeholder="Ej: 2">
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notas/Observaciones (Opcional)</label>
+                <textarea id="notes" rows="3" placeholder="Alguna nota adicional para la reserva"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn primary">Confirmar Reserva</button>
+            <div id="message" class="message"></div>
+        </form>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>
