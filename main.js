@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const operatingHoursMessage = document.getElementById('operatingHoursMessage');
 
     // Horario de operación para tomar reservas (7 AM a 4 PM)
-    const OPENING_HOUR = 7;
-    const CLOSING_HOUR = 22; // 4 PM
+    const OPENING_HOUR = 0;
+    const CLOSING_HOUR = 4; // 4 PM
 
     // Función para mostrar mensajes
     function showMessage(msg, type) {
